@@ -1,0 +1,10 @@
+{% extends "./layouts/base.html" %}
+{% block title %}<title>Repertorio</title>{% endblock %}
+{% block body %}
+<h1><center>{{artist_data.name_artist}}</center></h1>
+<ul>
+    {% for song in artist_data.song_list %}
+        <li><a href="{% url 'song_play' song.id %}">{{song.name_song}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

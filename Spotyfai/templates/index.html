@@ -1,0 +1,16 @@
+{% extends "./layouts/base.html" %}
+{% block title %}<title>spotyfai</title>{% endblock %}
+{% block body %}
+<h1><center>Spotyfai</center></h1>
+<p>
+    Hola, estas en spotyfai, aqui encontraras todo tu musica totalmente gratis, obten en acceso premiun para
+    poder desgargar tu musica y escucharla sin anuncios, disfruta de los mejores albums del tiempo y de tus
+    artistas favoritos con sus mejores exitos. 
+</p>
+<h5>Tus artistas</h5>
+<ul>
+    {% for artist in list_artist %}
+        <li><a href="{% url 'song' artist.id %}">{{artist.name_artist}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

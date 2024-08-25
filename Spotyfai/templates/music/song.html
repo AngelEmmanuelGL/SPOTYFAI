@@ -1,0 +1,13 @@
+{% extends "./layouts/base.html" %}
+{% block title %}<title>Song</title>{% endblock %}
+{% block body %}
+    <h1><center>{{data_song.name_song}}</center></h1>
+
+    <h4>Artist: {{data_song.artist.name_artist}}</h4>
+
+    <h3><center>Letter</center></h3>
+
+    <p>
+        {{data_song.letter}}
+    </p>
+{% endblock %} 
