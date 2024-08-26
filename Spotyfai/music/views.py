@@ -50,33 +50,10 @@ def create_song(request):
         artist_relation_foreignkey = Artist.objects.get(id = 4)
     except Artist.DoesNotExist:
         return HttpResponse("user do not exist")
-    name_song = "el de la chevy"
-    letter = """Viene en su Chevy silverado
-Allá por Denver, Colorado lo miran
-Siempre, trae gorra el muchacho
-De buen estilo y muy buen porte al caminar
-Tiene sangre de Zacatécas
-Su padre y madre se lo vinieron a dar
-Tiene la sangre entre sus venas
-Es cailentito si lo hacen enojar
-Allá por el freeway, la Chevy va bramando
-O llanta va quemando
-Siempre bien al tiro
-Con corridos sonando
-Al junior va sonando
-Cuelga un San Júdas en el pecho
-Es el déboto y el santito lo cuida
-Tiene ya tiempo trabajando
-Y los gustitos a él le gusta agarrar
-Ruge el motor alterado
-En varias de sus trocas ya lo han visto andar
-Allá en los arrancones
-Me han visto celebrando
-Las trocas van sonando
-Y la Chevy
-De vista y caliente
-Aquí traigo una plebita
-Soy enamorado, ahí nomás pa terminar"""
+    name_song = "name the song"
+    letter = """
+letter
+"""
     copyright_song = True
     new_song = Song.objects.create(artist = artist_relation_foreignkey,
                                    name_song = name_song,
